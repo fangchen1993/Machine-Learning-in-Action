@@ -144,10 +144,10 @@ def classify(inputTree,featLabels,testVec):
 if  '__main__':
     dataSet = OpenData('lenses.txt')
     Labels =  ['age','prescript','astigmatic','tearRate']
-    test = ['young', 'myope', 'no', 'reduced']
+    test = ['young', 'myope', 'no', 'reduced']#no lense
     myTree = createTree(dataSet,Labels)#注意在构建决策数的过程中del了labels的成员,所以在测试的时候需要重新写出testLabels,而不能直接给labels
-    testLabels = ['age','prescript','astigmatic','tearRate']
-    print(classify(myTree,testLabels,test))
+    PlotTree.createPlot(myTree)
+
 
 
 
