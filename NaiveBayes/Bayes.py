@@ -59,7 +59,7 @@ def trainNB0(trainMatrix,trainCategory):
 #INPUT:vec2Classify:输入词向量的word2vec模型 p0Vec,p1Vec,pClass1:p0Vect,p1Vect,pAbusive
 #OUTPUT:输入词向量的类别
 #Note:这里用log求和实际上进行合并,log(f),f是一个求乘积的运算,展开后是贝叶斯条件概率公式,分母p(w)对于分类来说是没有影响的
-#同理,整个的概率log后也是对分类没影响的,因为p1和p0的相对大小不会变
+#同理,整个的概率log后也是对分类没影响的,因为p1和p0的相对大小不会变(log是个单调增函数,哪怕p1和p0都是负数)
 def classifyNB(vec2Classify,p0Vec,p1Vec,pClass1):
     p1 = sum(vec2Classify*p1Vec)+log(pClass1)
     p0 = sum(vec2Classify*p0Vec)+log(1.0-pClass1)

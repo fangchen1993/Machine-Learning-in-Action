@@ -6,4 +6,4 @@
 # @license : BSD
 import  feedparser
 ny=feedparser.parse('http://www.nasa.gov/rss/dyn/image_of_the_day.rss')
-print(ny['entries'])
+print(ny['entries'])#'entries'是入口
