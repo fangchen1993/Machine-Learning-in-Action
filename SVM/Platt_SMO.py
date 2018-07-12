@@ -44,7 +44,7 @@ def selectJ(i,oS,Ei):
     maxK = -1;maxDeltaE=0;Ej=0
     oS.eCache[i]=[1,Ei] #eCahe是所有误差的缓存区
     vaildEcacheList = nonzero(oS.eCache[:,0].A)[0]
-    #.A表示转化为array,注意nonzero返回的成对的值,这里validEcache返回的是第一列非零的行索引.见博客:
+    #.A表示转化为array,注意nonzero返回的成对的值,这里validEcache返回的是第一列非零的行索引.见博客:https://blog.csdn.net/qq_28773183/article/details/81013226
     if(len(vaildEcacheList))>1:
         for k in vaildEcacheList:
             if k==i:continue
